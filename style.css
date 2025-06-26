@@ -90,7 +90,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('Screenshot 2025-06-26 at 10.18.08 AM.png') no-repeat center center;
+  background: url('tree.png') no-repeat center center;
   background-size: cover;
   opacity: 0.3; /* Adjust opacity here */
   z-index: 0;

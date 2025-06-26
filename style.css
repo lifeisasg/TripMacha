@@ -189,15 +189,20 @@ button {
   }
 }
 
-
-
-/* ========== MOBILE RESPONSIVE DESIGN ========== */
+/* ============================
+   FULL MOBILE RESPONSIVE LAYOUT
+   ============================ */
 @media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+    height: auto;
+  }
 
   .main-container,
   .main-hero {
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     padding: 20px;
     height: auto;
   }
@@ -206,72 +211,116 @@ button {
     flex-direction: column;
     width: 100%;
     height: auto;
-    border-radius: 0;
     box-shadow: none;
+    border-radius: 0;
   }
 
   .left-section,
   .right-section {
     width: 100%;
-    padding: 30px 20px;
+    padding: 20px;
     text-align: center;
+    position: relative;
+  }
+
+  .logo {
+    position: relative;
+    width: 120px;
+    margin: 10px auto;
+    display: block;
   }
 
   .tagline {
     font-size: 20px;
     text-align: center;
+    margin-top: 10px;
   }
 
   .gif-character {
-    position: static;
-    width: 70%;
+    position: relative;
+    width: 80%;
     height: auto;
-    max-height: none;
+    max-height: 400px;
     margin: 20px auto;
   }
 
   .hero-box {
-    position: static;
-    width: 100%;
-    max-width: 100%;
+    position: relative;
+    width: 90%;
+    max-width: 95%;
     margin-top: 20px;
     padding: 30px 20px;
     backdrop-filter: blur(10px);
+    text-align: center;
+  }
+
+  .greeting {
+    font-size: 24px;
   }
 
   .hero-text {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.4;
   }
 
   .hero-buttons {
     flex-direction: column;
+    gap: 12px;
     align-items: center;
-    gap: 10px;
   }
 
   .btn {
     width: 100%;
-    text-align: center;
-  }
-
-  input,
-  button {
-    width: 100%;
+    max-width: 280px;
+    padding: 12px 0;
+    font-size: 16px;
   }
 
   .form {
     gap: 15px;
+    width: 100%;
+  }
+
+  .form input,
+  .form button {
+    width: 100%;
   }
 
   .login,
   .forgot-password {
     text-align: center;
+    font-size: 14px;
   }
 
-  .logo {
-    width: 120px;
-    top: 10px;
-    left: 10px;
+  .name-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+.card {
+    display: flex;
+    flex-direction: column-reverse; /* ✅ puts scooter section below the form */
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .scooter-img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .tagline {
+    font-size: 20px;
+    margin-top: 10px;
   }
 }

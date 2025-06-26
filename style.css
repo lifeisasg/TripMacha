@@ -1,0 +1,277 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main Card Container */
+.main-container {
+  width: 110%;
+  max-width: 1100px;
+  height: 120%;
+  max-height: 1200px;
+  padding: 40px;
+  padding-top: 300px;
+
+}
+
+.card {
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  background-color: white;
+  height: 600px;
+}
+
+/* Left Side */
+.left-section {
+  width: 40%;
+  background: linear-gradient(to bottom, #B4EBE6, #ffffff);
+  padding: 30px;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 150px;
+  height: 150px;
+  width: 225px;
+}
+
+.tagline {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.5;
+  text-align: left;
+}
+
+
+.scooter {
+  position: absolute;
+  bottom: 10px;
+  left: -250px;
+  width: 320px;
+  animation: scooterSlide 2s forwards ease;
+  animation-delay: 0s;
+  width: 400px;
+  height: 400px;
+}
+
+@keyframes scooterSlide {
+  to {
+    left: 35px;
+  }
+}
+
+/* Right Side */
+.right-section {
+  width: 60%;
+  position: relative;
+  padding: 60px;
+  overflow: hidden;
+}
+
+.right-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('Screenshot 2025-06-26 at 10.18.08 AM.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.3; /* Adjust opacity here */
+  z-index: 0;
+}
+
+.right-section * {
+  position: relative;
+  z-index: 1;
+}
+
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeDown 1s forwards;
+  animation-delay: 0.8s;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+  animation-delay: 0.8s;
+  padding: 20px;
+}
+
+.name-row {
+  display: flex;
+  gap: 20px;
+  opacity: 60%;
+  padding: 5px;
+}
+
+.email-row {
+  display: flex;
+  gap: 20px;
+  opacity: 60%;
+  padding: 5px;
+}
+
+.pass-row {
+  display: flex;
+  gap: 20px;
+  opacity: 60%;
+  padding: 5px;
+
+}
+
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #aaa;
+  font-size: 16px;
+  width: 100%;
+}
+
+button {
+  padding: 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login {
+  font-size: 14px;
+  text-align: center;
+}
+
+.login a {
+  color: #0000ee;
+  text-decoration: none;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* ========== MOBILE RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+
+  .main-container,
+  .main-hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: auto;
+  }
+
+  .card {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .tagline {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .gif-character {
+    position: static;
+    width: 70%;
+    height: auto;
+    max-height: none;
+    margin: 20px auto;
+  }
+
+  .hero-box {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    padding: 30px 20px;
+    backdrop-filter: blur(10px);
+  }
+
+  .hero-text {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  input,
+  button {
+    width: 100%;
+  }
+
+  .form {
+    gap: 15px;
+  }
+
+  .login,
+  .forgot-password {
+    text-align: center;
+  }
+
+  .logo {
+    width: 120px;
+    top: 10px;
+    left: 10px;
+  }
+}
